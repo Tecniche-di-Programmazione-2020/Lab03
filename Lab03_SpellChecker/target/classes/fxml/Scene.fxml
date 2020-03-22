@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label text="Lab03_SpellChecker" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Chose the language : ">
+                     <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceLanguage" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <TextArea prefHeight="200.0" prefWidth="200.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#doSpellCheck" text="Spell Check" />
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Wrong words" />
+               </children>
+            </HBox>
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox fx:id="txtErrorsPhrase" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" visible="false">
+                     <children>
+                        <Label text="The text contains " textFill="RED" />
+                        <Label fx:id="txtErrors" text="2" textFill="RED" />
+                        <Label text=" errors" textFill="RED">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#doClearText" text="Clear Text" />
+               </children>
+            </HBox>
+            <HBox fx:id="txtTimePhrase" prefHeight="100.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label text="Spell check completed in " />
+                  <Label fx:id="txtTime" text="0.0000000" />
+                  <Label text=" seconds" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
