@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.spellchecker.FXMLController">
    <top>
       <Label text="Lab03_SpellChecker" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -37,7 +37,7 @@
                   <Insets />
                </opaqueInsets>
             </HBox>
-            <TextArea prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="txtInput" prefHeight="200.0" prefWidth="200.0" />
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#doSpellCheck" text="Spell Check" />
@@ -51,7 +51,7 @@
                   <Label text="Wrong words" />
                </children>
             </HBox>
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="txtOutput" editable="false" prefHeight="200.0" prefWidth="200.0" />
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <HBox fx:id="txtErrorsPhrase" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" visible="false">
